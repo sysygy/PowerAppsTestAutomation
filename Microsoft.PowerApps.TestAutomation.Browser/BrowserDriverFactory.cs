@@ -31,7 +31,7 @@ namespace Microsoft.PowerApps.TestAutomation.Browser
                     driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 5);
                     break;
                 case BrowserType.Edge:
-                    var edgeService = EdgeDriverService.CreateDefaultService(options.DriversPath);
+                    var edgeService = EdgeDriverService.CreateDefaultService();
                     edgeService.HideCommandPromptWindow = options.HideDiagnosticWindow;
                     driver = new EdgeDriver(edgeService,options.ToEdge(), TimeSpan.FromMinutes(20));
 
